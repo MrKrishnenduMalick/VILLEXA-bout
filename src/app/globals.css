@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 14 5 13;
+    --foreground: 253 245 230;
+  }
+
+  body {
+    background-color: #0d040c;
+    color: #f7ebe1;
+    overflow-x: hidden;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom luxury glassmorphism surfaces */
+.glass-panel {
+  background: linear-gradient(135deg, rgba(38, 14, 33, 0.45) 0%, rgba(20, 7, 18, 0.65) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 180, 89, 0.22);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45), inset 0 1px 1px 0 rgba(255, 235, 200, 0.12);
+}
+
+.glass-panel-gold {
+  background: linear-gradient(135deg, rgba(45, 17, 40, 0.55) 0%, rgba(25, 8, 22, 0.75) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 180, 89, 0.4);
+  box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.6), 0 0 25px rgba(226, 180, 89, 0.25), inset 0 1px 2px rgba(255, 240, 210, 0.25);
+}
+
+.glass-pill {
+  background: rgba(45, 18, 40, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 180, 89, 0.28);
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #fff2db 0%, #ddb765 45%, #b08130 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-button {
+  background: linear-gradient(135deg, #f7e6c4 0%, #ddb765 45%, #b28231 100%);
+  color: #1a0815;
+  box-shadow: 0 4px 20px rgba(221, 183, 101, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-button:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #f4e3c0 40%, #c4963a 100%);
+  box-shadow: 0 6px 28px rgba(221, 183, 101, 0.55);
+  transform: translateY(-2px);
+}
+
+/* 3D Perspective Container for Signature Carousel */
+.perspective-stage {
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Illuminated Stage Platform for Carousel */
+.stage-platform {
+  background: radial-gradient(ellipse at center, rgba(226, 180, 89, 0.35) 0%, rgba(226, 180, 89, 0.1) 40%, rgba(45, 16, 40, 0) 70%);
+  border-radius: 50%;
+  filter: blur(1px);
+}
+
+.stage-ring {
+  border: 1px solid rgba(226, 180, 89, 0.45);
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(226, 180, 89, 0.35), inset 0 0 20px rgba(226, 180, 89, 0.2);
+}
+
+/* Luxury scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d040c;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(221, 183, 101, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(221, 183, 101, 0.6);
+}
